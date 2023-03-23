@@ -1,7 +1,10 @@
 import React from "react"
 import { Card } from "react-bootstrap"
-import TodoRowItem from "./TodoRowItem"
-function TodoTable(props: {todos: TodoModel[], deleteTodo: Function}) {
+import { TodoRowItem } from "./TodoRowItem"
+export const TodoTable: React.FC<{
+  todos: TodoModel[]
+  deleteTodo: Function
+}> = (props) => {
   return (
     <Card>
       <Card.Header className="text-center">To do list</Card.Header>
@@ -31,5 +34,3 @@ function TodoTable(props: {todos: TodoModel[], deleteTodo: Function}) {
     </Card>
   )
 }
-
-export default TodoTable

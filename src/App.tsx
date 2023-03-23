@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import "./App.css"
 import { Button, Container } from "react-bootstrap"
-import TodoTable from "./components/TodoTable"
-import NewTodoForm from "./components/NewTodoForm"
-function App() {
+import { TodoTable } from "./components/TodoTable"
+import { NewTodoForm } from "./components/NewTodoForm"
+export const App = () => {
   const [showAddTodoForm, setShowAddTodoForm] = useState(false)
   const [todos, setTodos] = useState([
     { rowNumber: 1, rowDescription: "Feed puppy", rowAssigned: "User one" },
@@ -54,5 +54,3 @@ function App() {
     </Container>
   )
 }
-
-export default App

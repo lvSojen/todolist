@@ -1,12 +1,12 @@
 import React from "react"
 import { Button } from "react-bootstrap"
 
-function TodoRowItem(props: {
+export const TodoRowItem: React.FC<{
   rowNumber: number
   rowDescription: string
   rowAssigned: string
   deleteTodo: Function
-}) {
+}> = (props) => {
   return (
     <tr>
       <th scope="row">{props.rowNumber}</th>
@@ -33,5 +33,3 @@ function TodoRowItem(props: {
     </tr>
   )
 }
-
-export default TodoRowItem
