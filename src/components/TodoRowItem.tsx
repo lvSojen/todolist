@@ -1,7 +1,12 @@
 import React from "react"
 import { Button } from "react-bootstrap"
 
-function TodoRowItem(props) {
+function TodoRowItem(props: {
+  rowNumber: number
+  rowDescription: string
+  rowAssigned: string
+  deleteTodo: Function
+}) {
   return (
     <tr>
       <th scope="row">{props.rowNumber}</th>

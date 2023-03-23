@@ -1,7 +1,7 @@
 import React from "react"
 import { Card } from "react-bootstrap"
 import TodoRowItem from "./TodoRowItem"
-function TodoTable(props) {
+function TodoTable(props: {todos: TodoModel[], deleteTodo: Function}) {
   return (
     <Card>
       <Card.Header className="text-center">To do list</Card.Header>

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Button, Form } from "react-bootstrap"
-function NewTodoForm(props) {
+function NewTodoForm(props: {addTodo: Function}) {
   const [description, setDescription] = useState("")
   const [assigned, setAssigned] = useState("")
   const submitTodo = () => {
@@ -10,11 +10,11 @@ function NewTodoForm(props) {
       setDescription("")
     }
   }
-  const descriptionChange = (event) => {
+  const descriptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.value)
     setDescription(event.target.value)
   }
-  const assignedChange = (event) => {
+  const assignedChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.value)
     setAssigned(event.target.value)
   }
